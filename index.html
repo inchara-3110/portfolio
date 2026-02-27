@@ -69,7 +69,7 @@
     <div class="skill-card"><div class="skill-category">Tools &amp; Platforms</div><div class="skill-name">Windows Event Viewer</div></div>
     <div class="skill-card"><div class="skill-category">Tools &amp; Platforms</div><div class="skill-name">VirtualBox / VMware</div></div>
     <div class="skill-card"><div class="skill-category">Currently Learning</div><div class="skill-name">SIEM &amp; Log Correlation</div></div>
-    <div class="skill-card"><div class="skill-category">Currently Learning</div><div class="skill-name">MITRE ATT&amp;CK Framework</div></div>
+    <div class="skill-card"><div class="skill-category">Currently Learning</div><div class="skill-name">MITRE ATT&CK Framework</div></div>
     <div class="skill-card"><div class="skill-category">Currently Learning</div><div class="skill-name">Incident Response Process</div></div>
     <div class="skill-card"><div class="skill-category">Currently Learning</div><div class="skill-name">Python for Security Automation</div></div>
   </div>
@@ -192,4 +192,17 @@
   &copy; 2026 K Inchara — Built with passion for cybersecurity
 </footer>
 
-<script data-cf
+<script>
+  // Reveal sections on scroll
+  const reveals = document.querySelectorAll('.reveal');
+  const observer = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        entry.target.classList.add('visible');
+      }
+    });
+  }, { threshold: 0.1 });
+  reveals.forEach(el => observer.observe(el));
+</script>
+</body>
+</html>
